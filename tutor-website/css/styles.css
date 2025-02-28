@@ -22,19 +22,30 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--dark-color);
 }
 
 ul {
   list-style: none;
 }
 
+.container  {
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/header-background.jpg");
+  background-color: coral;
+}
+
 .nav-bar {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding-top: .5rem;
-
 
   .logo {
     height: 3.5rem;
@@ -46,12 +57,28 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 5rem;
-    gap: 3rem;
+    gap: 2rem;
+
+    a {
+      font-weight: 600;
+      color: white;
+    }
   }
 
   .facebook, .twitter {
     font-size: 1.5rem;
   }
+}
+
+.hero-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "hero-h1 hero-img"
+    "hero-p hero-img"
+    "btn hero-img";
+  height: 100vh;
+  gap: 2rem;
 
 }
