@@ -76,7 +76,7 @@ ul {
   max-height: 100vh;
   justify-content: center;
   align-items: center;
-  margin: 6.5rem 3rem;
+  margin: 6rem 2rem;
   color: white;
   
   .hero-flex-1 {
@@ -87,21 +87,17 @@ ul {
     .hero-h1 {
       font-size: 3.5rem;
       line-height: 1.2;
-      margin-bottom: 1rem;
     }
     
     .hero-p {
       font-size: 1.2rem;
-      margin-bottom: 1rem;
     }
 
     .btn {
-      padding: 1.8rem 3rem;
+      padding: 1rem;
       background-color: yellow;
       border-radius: 3rem;
       border: none;
-      margin-top: 1rem;
-      font-size: 1rem;
     }
   }
 }
