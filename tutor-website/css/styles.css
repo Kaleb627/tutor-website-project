@@ -55,7 +55,7 @@ img {
 /* navbar */
 .navbar {
     /* temp color to allowus to visualize the navbar while styling it */
-    background-color: black;
+    /* background-color: black; */
     color: white;
     padding: 1rem 2rem;
     /* we want this element position to be fixed at the top so we can make it follow the user as they scroll (this is one method there are other ways see position:sticky) */
@@ -151,6 +151,68 @@ img {
         font-size: 1.2rem;
     }
 }
+
+.hero {
+  height: 100vh;
+  /* needed to add ../ to indicate a stepping out into parent folder? */
+  background: var(--primary-color) url("../images/header-background.jpg") no-repeat;
+  /* cover the entire container area while staying within the container */
+  background-size: 100% 100%;
+}
+
+.hero-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 6rem;
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: white;
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1.4rem 2.3rem;
+      border: 1px var(--secondary-color) solid;
+      color: var(--dark-color);
+      border-radius: 30px;
+      background-color: var(--secondary-color);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        color: white;
+        border: 1px white solid;
+        background-color: var(--primary-color);
+        transition: 0.2s ease;
+      }
+    }
+
+  }
+
+  img {
+    
+  }
+}
+
+
+
 
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
