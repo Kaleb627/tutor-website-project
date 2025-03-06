@@ -1,3 +1,4 @@
+/* reset to avoid styling conflicts */
 *,
 *::before,
 *::after {
@@ -6,6 +7,8 @@
   box-sizing: border-box;
 }
 
+/* putting main colors in variables for ease of use and adjustment later */
+/* this is particularly useful when creating a business website where your brand may have a set color */
 :root {
   --primary-color: #fc5d66;
   --secondary-color: #ffc05a;
@@ -15,89 +18,165 @@
 
 html,
 body {
+  /* sets primary and backup font if primary is missing */
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
+  /* scroll smooth is important since most content is on the home page and clicking on navigation will jump between sections, smooth scrolling makes it less jarring and easier to follow */
   scroll-behavior: smooth;
 }
 
 a {
+  /* get rid of link underlines */
   text-decoration: none;
 }
 
 ul {
+  /* remove preset bullet points */
   list-style: none;
 }
 
-.container  {
-  width: 100%;
+img {
+  /* make sure images dont spill out of containers */
+  max-width: 100%;
 }
 
-.hero {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("../images/header-background.jpg");
-  background-color: coral;
+/* container sizes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.container-sm{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.nav-bar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-top: .5rem;
+/* navbar */
+.navbar {
+    /* temp color to allowus to visualize the navbar while styling it */
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    /* we want this element position to be fixed at the top so we can make it follow the user as they scroll (this is one method there are other ways see position:sticky) */
+    position: fixed;
+    /* places element at the very top and all the way from left to right */
+    top: 0;
+    right: 0;
+    left: 0;
+    /* always be on top set high z-index */
+    z-index: 1000;
+    /* setting up a transition for use later when we make the navbar become transparent as you scroll past the hero section */
+    /* transition: property trasition_length  speed_curve*/
+    /* east-in-out = slow start and slow end */
+    transition: background-color 0.3s ease-in-out;
+}
 
-  .logo {
-    height: 3.5rem;
-    width: 5rem;
-    padding-top: .5rem;
-  }
-  
-  .nav-items {
+.navbar-flex{
     display: flex;
-    justify-content: center;
+    /* places all remaining space between flex items which in this case is the logo and the list containing the navigation links */
+    justify-content: space-between;
+    /* centers items on vertical axis */
     align-items: center;
-    gap: 2rem;
+
+    img {
+
+        width: 81px;
+        height: 32px;
+    }
+
+    .main-menu-list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-weight: 600;
+    }
 
     a {
-      font-weight: 600;
-      color: white;
-    }
-  }
+        color: white;
 
-  .facebook, .twitter {
-    font-size: 1.5rem;
-  }
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
 }
 
-.hero-flex {
-  display: flex;
-  max-width: 100vw;
-  max-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  margin: 6rem 2rem;
-  color: white;
-  
-  .hero-flex-1 {
-    flex-direction: column;
-    max-width: 28rem;
-    margin-right: 5rem;
-
-    .hero-h1 {
-      font-size: 3.5rem;
-      line-height: 1.2;
-    }
-    
-    .hero-p {
-      font-size: 1.2rem;
-    }
-
-    .btn {
-      padding: 1rem;
-      background-color: yellow;
-      border-radius: 3rem;
-      border: none;
-    }
-  }
+/* mobile menu */
+/* we want to hide the mobile menu by default and only show it if the screen is below a certain size so we will change this in the media query */
+.mobile-menu {
+    display: none;
 }
+
+.navbar {
+    .mobile-menu-toggle {
+        color: white;
+        cursor: pointer;
+    }
+
+    .mobile-menu-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        /* add some color and transparency so the content behind it isnt too obscured but the menu is readable */
+        background-color: rgba(0, 0, 0, .8);
+        opacity: .9;
+        padding: 2rem 3rem;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        /* we want the hamburger menu to slide in from the side when activates so we need to use some transform and translate attribtues */
+        /* first we add translateX(100%) to move it off the screen */
+        transform: translateX(100%);
+        /* remember we want the menu to slide in not just appear so we need to use a transition */
+        /* this means when the transform element is activated or changes it will perform the animation over 0. seconds and start slow */
+        transition: transform 0.3s ease;
+
+        /* then we need a class to put the mobile navigation menu back where it was when the button is activates */
+        /* then we need to use javascript to add the class "active" when the hamburger menu is clikced and remove it when it is clicked again */
+    }
+
+    .mobile-menu-items.active {
+        transform:translateX(0)
+    }
+
+    .mobile-menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Queries */
+/* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
+@media (max-width:1200px) {
+}
+
+@media (max-width:992px) {}
+/* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
+@media (max-width:768px) {
+    /* first we want to hide the desktop version of the menu so it doesnt interfere with the mobile menu */
+    .main-menu-items {
+        display: none;
+    }
+
+    .navbar {
+        .mobile-menu {
+            display: block;
+        }
+
+        .mobile-menu-toggle {
+            display: block;
+            padding: .6rem;
+        }
+        
+    }
+}
+
+@media (max-width:576px) {}
+

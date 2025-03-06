@@ -17,51 +17,65 @@
 </head>
 
 <body>
-<div class="container">
-  <!-- navigation menu -->
-  <section class="hero">
-    <nav class="nav-bar">
-      <a class="logo" href="./index.html">
-        <img src="./images/logo.svg" alt="tutor logo">
-      </a>
+  <nav class="navbar">
+      <!-- we dont want to put the container around everything in a project of this size otherwise we will have problems placing background images and  contriolling element widths -->
+      <div class="navbar-flex container">
+          <img src="./images/logo.svg" alt="tutor logo">
 
-      <ul class="nav-items">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#chapters">Chapters</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#takeaways">Takeaways</a></li>
-        <li><a href="#author">Author</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a class="facebook" href="https://www.facebook.com">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a class="twitter" href="https://www.twitter.com">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
+          <div class="main-menu-items">
+              <ul class="main-menu-list">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#chapters">Chapters</a></li>
+                  <li><a href="#summary">Summary</a></li>
+                  <li><a href="#takeaways">Takeaways</a></li>
+                  <li><a href="#author">Author</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li>
+                      <a href="facebook.com">
+                          <i class="fa-brands fa-facebook"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="twitter.com">
+                          <i class="fa-brands fa-twitter"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
 
-    <div class="hero-flex">
-      <div class="hero-flex-1">
-        <h1 class="hero-h1">Create Your Own Video Courses</h1>
-        <p class="hero-p">Dive deep into the world of creativity and learn to craft stunning videos that captivate your audience</p>
-        <button class="btn">$29 Get Course</button>
+          <!-- mobile menu -->
+           <div class="mobile-menu">
+              <!-- hamburger button -->
+               <div class="mobile-menu-toggle">
+                  <i class="fas fa-bars fa-2x"></i>
+               </div>
+               <!-- mobile menu items -->
+              <div class="mobile-menu-items">
+                  <ul class="mobile-menu-list">
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#chapters">Chapters</a></li>
+                      <li><a href="#summary">Summary</a></li>
+                      <li><a href="#takeaways">Takeaways</a></li>
+                      <li><a href="#author">Author</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li>
+                          <a href="facebook.com">
+                              <i class="fa-brands fa-facebook"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="twitter.com">
+                              <i class="fa-brands fa-twitter"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+           </div>
       </div>
-
-      <div class="hero-flex-2">
-        <img class="hero-img" src="./images/header-course.png" alt="girl sitting at computer viewing a tutor course">
-      </div>
-    </div>
-
-  </section>
-
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rerum optio vero modi voluptatem impedit cupiditate cum suscipit dolore id ea soluta nemo, quisquam libero ab hic sunt, excepturi, facere iure perspiciatis nihil deserunt repellendus! Deleniti perspiciatis animi accusamus iusto quis rem dignissimos itaque, velit beatae voluptas facilis doloribus sapiente suscipit corrupti ducimus error ratione quo eius eveniet. Sed quaerat ad praesentium in excepturi architecto, aspernatur nostrum ipsum libero exercitationem cupiditate facilis consectetur, aut repudiandae iusto recusandae culpa eligendi labore. Accusantium possimus optio doloremque necessitatibus ducimus quibusdam nulla, iure magnam itaque.</p>
-
+  </nav>
 </div>
+
+<script src="./script.js"></script>
 </body>
 
 </html>
