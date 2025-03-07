@@ -141,7 +141,7 @@ img {
         left: 0;
         width: 100%;
         /* add some color and transparency so the content behind it isnt too obscured but the menu is readable */
-        background-color: rgba(0, 0, 0, .8);
+        background-color: var(--dark-color);
         opacity: .9;
         padding: 2rem 3rem;
         text-align: center;
@@ -264,8 +264,9 @@ img {
     }
 
     img {
-      max-width: 500px;
+      max-width: 600px;
       margin-right: 0;
+      margin-top: 2rem;
     }
 
     h1 {
@@ -276,14 +277,10 @@ img {
       justify-content: center;
       align-items: center;
     }
-
-    .frame-decoration {
-      
-    }
   }
 }
 
-}
+
 /* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
 @media (max-width:768px) {
     /* first we want to hide the desktop version of the menu so it doesnt interfere with the mobile menu */
@@ -304,5 +301,15 @@ img {
     }
 }
 
-@media (max-width:576px) {}
+@media (max-width:576px) {
+  .hero  {
+    margin-top: -5rem;
+    .hero-flex {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+  }
+}
 
