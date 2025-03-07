@@ -72,22 +72,28 @@ img {
 
 /* navbar */
 .navbar {
-    /* temp color to allowus to visualize the navbar while styling it */
-    /* background-color: black; */
-    color: white;
-    padding: 1rem 2rem;
-    /* we want this element position to be fixed at the top so we can make it follow the user as they scroll (this is one method there are other ways see position:sticky) */
-    position: fixed;
-    /* places element at the very top and all the way from left to right */
-    top: 0;
-    right: 0;
-    left: 0;
-    /* always be on top set high z-index */
-    z-index: 1000;
-    /* setting up a transition for use later when we make the navbar become transparent as you scroll past the hero section */
-    /* transition: property trasition_length  speed_curve*/
-    /* east-in-out = slow start and slow end */
-    transition: background-color 0.3s ease-in-out;
+  /* temp color to allowus to visualize the navbar while styling it */
+  /* background-color: black; */
+  color: white;
+  padding: 1rem 2rem;
+  /* we want this element position to be fixed at the top so we can make it follow the user as they scroll (this is one method there are other ways see position:sticky) */
+  position: fixed;
+  /* places element at the very top and all the way from left to right */
+  top: 0;
+  right: 0;
+  left: 0;
+  /* always be on top set high z-index */
+  z-index: 1000;
+  /* setting up a transition for use later when we make the navbar become transparent as you scroll past the hero section */
+  /* transition: property trasition_length  speed_curve*/
+  /* east-in-out = slow start and slow end */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.navbar-scroll {
+  background-color: rgba(235, 77, 85, .7);
+  /* we are going to use backdrop filter to add a little blur */
+  backdrop-filter: 10px;
 }
 
 .navbar-flex{
