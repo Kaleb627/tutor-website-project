@@ -54,13 +54,14 @@ img {
 
 .btn {
   display: inline-block;
-  padding: 1.6rem 2.6rem;
+  padding: 1.3rem 2.3rem;
   border: 1px solid var(--secondary-color);
-  border-radius: 30px;
+  border-radius: 32px;
   background-color: var(--secondary-color);
   color: var(--dark-color);
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 1rem;
 
   &:hover {
       color: white;
@@ -181,12 +182,26 @@ img {
   color: white;
   /* want to hide any hoeizontal scroll bars especially when using tricks like with the mobile menu where the menu is outside the view of the window on the left or right */
   overflow: hidden;
+  /* need position relative to properly position the frame decoration */
+  position: relative;
 
   img {
     width: 100%;
     /* to move the image over to the right a bit we can use a negitive value for margin */
     margin-right: -6.25rem;
   }
+
+  .frame-decoration {
+    /* absolute positiong removes the element (svg) from the document flow palcing it on top and not moving around other elements allowing us to layer / position it for the wave effect */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* use hiehgt to shrink it down a little */
+    height: 100px;
+    /* width 100% keeps it responsive allowing it to change length with window size */
+    width: 100%;
+  }
+
 }
 
 .hero-flex {
@@ -217,22 +232,58 @@ img {
       margin-bottom: 2rem;
     }
 
-    .btn {
-      font-size: 1rem;
-      }
     }
   }
-
-
-
-
 
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width:1200px) {
+    .hero {
+      .hero-flex {
+        gap: 2rem;
+      }
+
+      img {
+        max-width: 500px;
+        margin-right: 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
 }
 
-@media (max-width:992px) {}
+@media (max-width:992px) {
+  .hero {
+    text-align: center;
+
+    .hero-flex {
+      flex-direction: column;
+      padding-bottom: 4rem;
+    }
+
+    img {
+      max-width: 500px;
+      margin-right: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    .hero-content {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame-decoration {
+      
+    }
+  }
+}
+
+}
 /* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
 @media (max-width:768px) {
     /* first we want to hide the desktop version of the menu so it doesnt interfere with the mobile menu */
