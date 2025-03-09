@@ -356,6 +356,40 @@ section {
   }
 }
 
+/* summary */
+.summary {
+  background-color: var(--light-color);
+
+  .section-header {
+    padding-top: 1.5rem;
+  }
+
+  .summary-flex {
+    margin: 0 auto;
+    max-width: 55rem;
+    box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 2rem 2rem;
+    padding-bottom: 0.3rem;
+  }
+
+  li {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.588);
+    padding-bottom: 1rem;
+  }
+
+  li:nth-child(3n) {
+    border: none;
+  }
+
+  h3 {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 0.2rem 1rem;
+  }
+}
+
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width: 1200px) {
