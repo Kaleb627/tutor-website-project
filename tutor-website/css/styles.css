@@ -241,6 +241,73 @@ img {
 
 /* learn section */
 
+.learn {
+  margin-bottom: 3rem;
+  .learn-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .learn-text {
+    text-align: center;
+    margin-bottom: 2.9rem;
+    max-width: 42rem;
+
+    h1 {
+      padding-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .learn-goal-grid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    img {
+      width: 100%;
+      transition: 0.2s;
+      padding-bottom: 5px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    figcaption {
+      font-weight: bold;
+    }
+  }
+
+  .chapter-cards {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 3rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+      box-shadow: 0 0 15px -8px;
+      padding: 2rem;
+
+      img {
+        height: 6rem;
+      }
+    }
+  }
+}
+
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width: 1200px) {
@@ -284,6 +351,11 @@ img {
       align-items: center;
     }
   }
+  .learn {
+    .learn-goal-grid {
+      grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    }
+  }
 }
 
 /* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
@@ -303,6 +375,17 @@ img {
       padding: 0.6rem;
     }
   }
+
+  .learn {
+    .learn-goal-grid {
+      grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    }
+    .chapter-cards {
+      display: flex;
+      flex-direction: column;
+      max-width: 35rem;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -312,6 +395,17 @@ img {
       h1 {
         font-size: 2.5rem;
       }
+    }
+  }
+
+  .learn {
+    .learn-goal-grid {
+      grid-template: auto / 1fr;
+    }
+
+    .chapter-cards {
+      width: 100%;
+      padding: 0;
     }
   }
 }
