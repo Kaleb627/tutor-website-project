@@ -70,6 +70,49 @@ img {
   }
 }
 
+/* the course used a section header utility class rather than styling each header for each section which makes sense but i wouldnt have considered until i made a few more. take note */
+.section-header {
+  max-width: 47rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: var(--dark-color);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+  }
+}
+
+.heading-border {
+  width: 4rem;
+  height: 0.45rem;
+  background: var(--primary-color);
+  margin: 0 auto 1rem;
+}
+
+/* adding a section class to utilities since we want all sections to be deperated by the same amount */
+section {
+  margin: 4rem 0;
+}
+
+/* to make styling any future cards on this site easier we are going to place the chapter card styles in a card class unter utilities */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+}
+
 /* navbar */
 .navbar {
   /* temp color to allowus to visualize the navbar while styling it */
@@ -215,7 +258,6 @@ img {
   align-items: center;
   /* height: 100%; */
   gap: 6rem;
-  padding-bottom: 8rem;
 
   .hero-content {
     display: flex;
@@ -242,15 +284,15 @@ img {
 /* learn section */
 
 .learn {
-  margin-bottom: 3rem;
   .learn-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  /* initial styling for headers changed to use utility class located in utility section of this css document */
 
-  .learn-text {
+  /* .learn-text {
     text-align: center;
     margin-bottom: 2.9rem;
     max-width: 42rem;
@@ -263,18 +305,19 @@ img {
     p {
       font-size: 1.1rem;
     }
-  }
+  } */
 
   .learn-goal-grid {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
     gap: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 1rem;
 
     img {
       width: 100%;
       transition: 0.2s;
-      padding-bottom: 5px;
+      padding-bottom: 0.2rem;
+
       &:hover {
         transform: scale(1.1);
       }
@@ -282,29 +325,34 @@ img {
 
     figcaption {
       font-weight: bold;
+      font-size: 1rem;
     }
   }
+}
+
+/* chapter section */
+.course-chapters {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 
   .chapter-cards {
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     gap: 2rem;
     padding: 2rem 3rem;
+  }
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      text-align: center;
-      box-shadow: 0 0 15px -8px;
-      padding: 2rem;
+  h3 {
+    line-height: 1.3;
+  }
 
-      img {
-        height: 6rem;
-      }
-    }
+  p {
+    line-height: 1.4;
+  }
+
+  img {
+    height: 6rem;
   }
 }
 
@@ -380,6 +428,9 @@ img {
     .learn-goal-grid {
       grid-template: 1fr 1fr 1fr / 1fr 1fr;
     }
+  }
+
+  .course-chapters {
     .chapter-cards {
       display: flex;
       flex-direction: column;
@@ -402,10 +453,12 @@ img {
     .learn-goal-grid {
       grid-template: auto / 1fr;
     }
+  }
 
+  .course-chapters {
     .chapter-cards {
       width: 100%;
-      padding: 0;
+      padding: 0 1rem;
     }
   }
 }

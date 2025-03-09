@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <!-- navigation -->
   <nav class="navbar">
     <!-- we dont want to put the container around everything in a project of this size otherwise we will have problems placing background images and  contriolling element widths -->
     <div class="navbar-flex container">
@@ -73,7 +74,7 @@
       </div>
     </div>
   </nav>
-
+  <!-- hero -->
   <section class="hero">
     <div class="hero-flex container">
       <div class="hero-content">
@@ -100,74 +101,91 @@
     </svg>
   </section>
 
+  <!-- learn -->
   <section class="learn">
     <div class="learn-flex container">
-
-      <div class="learn-text">
+      <!-- changed class to "section-header" utility class based on course walkthrough and fact it will need repeated for follownig sections-->
+      <div class="section-header">
         <h1>What Will You Learn?</h1>
+        <div class="heading-border"></div>
         <p>Embark on a journey of learning with our comprehensive video courses. Discover the secrets of successful
-          video
-          creation and enhance your skills.</p>
+          video creation and enhance your skills.</p>
       </div>
 
+      <!-- learn topics -->
       <div class="learn-goal-grid">
-        <figure class="fig-1">
-          <img src="./images/description-1.jpg" alt="" class="image1">
+        <!-- here is an example of how the course did this section  -->
+        <!-- <div class="topics">
+            <div class="topic">
+              <div class="topic-image">
+                <img src="./images/description-1.jpg" alt="topic">
+              </div>
+              <div class="topic-text">Set Clear Objectives and Goals</div>
+            </div>
+          </div> -->
+
+        <figure>
+          <img src="./images/description-1.jpg" alt="topic" class="image1">
           <figcaption>Set Clear Objectives and Goals</figcaption>
         </figure>
-        <figure class="fig-2">
-          <img src="./images/description-2.jpg" alt="" class="image2">
+        <figure>
+          <img src="./images/description-2.jpg" alt="topic" class="image2">
           <figcaption>Plan Layout and Design Elements</figcaption>
         </figure>
-        <figure class="fig-3">
-          <img src="./images/description-3.jpg" alt="" class="image3">
+        <figure>
+          <img src="./images/description-3.jpg" alt="topic" class="image3">
           <figcaption>Sketch Creative Concepts</figcaption>
         </figure>
-        <figure class="fig-4">
-          <img src="./images/description-4.jpg" alt="" class="image4">
+        <figure>
+          <img src="./images/description-4.jpg" alt="topic" class="image4">
           <figcaption>Establish Strong Call-to-Actions</figcaption>
         </figure>
-        <figure class="fig-5">
-          <img src="./images/description-5.jpg" alt="" class="image5">
+        <figure>
+          <img src="./images/description-5.jpg" alt="topic" class="image5">
           <figcaption>Choose High-Quality HTML Templates</figcaption>
         </figure>
-        <figure class="fig-6">
-          <img src="./images/description-6.jpg" alt="" class="image6">
+        <figure>
+          <img src="./images/description-6.jpg" alt="topic" class="image6">
           <figcaption>Create Impressive Layout Previews</figcaption>
         </figure>
-        <figure class="fig-7">
-          <img src="./images/description-7.jpg" alt="" class="image7">
+        <figure>
+          <img src="./images/description-7.jpg" alt="topic" class="image7">
           <figcaption>Master Landing Page Coding Techniques</figcaption>
         </figure>
-        <figure class="fig-8">
-          <img src="./images/description-8.jpg" alt="" class="image8">
+        <figure>
+          <img src="./images/description-8.jpg" alt="topic" class="image8">
           <figcaption>Launch Your Project Successfully Online</figcaption>
         </figure>
       </div>
+  </section>
 
-      <div class="learn-text">
-        <h1 class="header">Main Course Chapters</h1>
-        <p>Explore the core concepts and techniques covered in our video course. Each chapter is designed to equip you
-          with essential skills for video creation.</p>
-      </div>
+  <!-- chapters -->
+  <!-- Originally i had included the chapters section in the learn flex box but since it is part of the navigation menu it needs to be its own section. It also requires an ID so that the navigation button will function -->
+  <section class="course-chapters" id="chapters">
+    <div class="section-header">
+      <h1 class="header">Main Course Chapters</h1>
+      <div class="heading-border"></div>
+      <p>Explore the core concepts and techniques covered in our video course. Each chapter is designed to equip you
+        with essential skills for video creation.</p>
+    </div>
 
-      <div class="chapter-cards">
-        <div class="card">
-          <img src="./images/chapters-icon-1.svg" alt="">
-          <h3>Setting Clear Objectives</h3>
-          <p>Learn how to define clear objectives and goals for your video projects, ensuring focus and direction</p>
-        </div>
-        <div class="card">
-          <img src="./images/chapters-icon-2.svg" alt="">
-          <h3>Content Creation Strategies</h3>
-          <p>Dive into effective content creation strategies that resonate with your audience</p>
-        </div>
-        <div class="card">
-          <img src="./images/chapters-icon-3.svg" alt="">
-          <h3>Coding Essentials</h3>
-          <p>Explore the fundamentals of coding for video projects, including HTML, CSS, and JavaScript</p>
-        </div>
+    <div class="chapter-cards">
+      <div class="card">
+        <img src="./images/chapters-icon-1.svg" alt="chapter 1">
+        <h3>Setting Clear Objectives</h3>
+        <p>Learn how to define clear objectives and goals for your video projects, ensuring focus and direction</p>
       </div>
+      <div class="card">
+        <img src="./images/chapters-icon-2.svg" alt="chapter 2">
+        <h3>Content Creation Strategies</h3>
+        <p>Dive into effective content creation strategies that resonate with your audience</p>
+      </div>
+      <div class="card">
+        <img src="./images/chapters-icon-3.svg" alt="chapter 3">
+        <h3>Coding Essentials</h3>
+        <p>Explore the fundamentals of coding for video projects, including HTML, CSS, and JavaScript</p>
+      </div>
+    </div>
     </div>
   </section>
 
