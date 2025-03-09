@@ -19,7 +19,7 @@
 html,
 body {
   /* sets primary and backup font if primary is missing */
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   /* scroll smooth is important since most content is on the home page and clicking on navigation will jump between sections, smooth scrolling makes it less jarring and easier to follow */
   scroll-behavior: smooth;
@@ -42,14 +42,14 @@ img {
 
 /* utility classes */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
-.container-sm{
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.container-sm {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .btn {
@@ -64,9 +64,9 @@ img {
   font-size: 1rem;
 
   &:hover {
-      color: white;
-      border: 1px white solid;
-      background-color: var(--primary-color);
+    color: white;
+    border: 1px white solid;
+    background-color: var(--primary-color);
   }
 }
 
@@ -90,97 +90,97 @@ img {
   transition: background-color 0.3s ease-in-out;
 }
 
-.navbar.navbar-scroll {
-  background-color: rgba(235, 77, 85, .7);
+.navbar-scroll {
+  background-color: rgba(235, 77, 85, 0.7);
   /* we are going to use backdrop filter to add a little blur */
-  backdrop-filter: 10px;
+  backdrop-filter: blur(10px);
 }
 
-.navbar-flex{
+.navbar-flex {
+  display: flex;
+  /* places all remaining space between flex items which in this case is the logo and the list containing the navigation links */
+  justify-content: space-between;
+  /* centers items on vertical axis */
+  align-items: center;
+
+  img {
+    width: 81px;
+    height: 32px;
+  }
+
+  .main-menu-list {
     display: flex;
-    /* places all remaining space between flex items which in this case is the logo and the list containing the navigation links */
-    justify-content: space-between;
-    /* centers items on vertical axis */
     align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+  }
 
-    img {
+  a {
+    color: white;
 
-        width: 81px;
-        height: 32px;
+    &:hover {
+      color: var(--secondary-color);
     }
+  }
 
-    .main-menu-list {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        font-weight: 600;
-    }
-
-    a {
-        color: white;
-
-        &:hover {
-            color: var(--secondary-color);
-        }
-    }
-
-    i {
-        font-size: 1.5rem;
-    }
+  i {
+    font-size: 1.5rem;
+  }
 }
 
 /* mobile menu */
 /* we want to hide the mobile menu by default and only show it if the screen is below a certain size so we will change this in the media query */
 .mobile-menu {
-    display: none;
+  display: none;
 }
 
 .navbar {
-    .mobile-menu-toggle {
-        color: white;
-        cursor: pointer;
-    }
+  .mobile-menu-toggle {
+    color: white;
+    cursor: pointer;
+  }
 
-    .mobile-menu-items {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        /* add some color and transparency so the content behind it isnt too obscured but the menu is readable */
-        background-color: var(--dark-color);
-        opacity: .9;
-        padding: 2rem 3rem;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        /* we want the hamburger menu to slide in from the side when activates so we need to use some transform and translate attribtues */
-        /* first we add translateX(100%) to move it off the screen */
-        transform: translateX(100%);
-        /* remember we want the menu to slide in not just appear so we need to use a transition */
-        /* this means when the transform element is activated or changes it will perform the animation over 0. seconds and start slow */
-        transition: transform 0.3s ease;
+  .mobile-menu-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* add some color and transparency so the content behind it isnt too obscured but the menu is readable */
+    background-color: var(--dark-color);
+    opacity: 0.9;
+    padding: 2rem 3rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* we want the hamburger menu to slide in from the side when activates so we need to use some transform and translate attribtues */
+    /* first we add translateX(100%) to move it off the screen */
+    transform: translateX(100%);
+    /* remember we want the menu to slide in not just appear so we need to use a transition */
+    /* this means when the transform element is activated or changes it will perform the animation over 0. seconds and start slow */
+    transition: transform 0.3s ease;
 
-        /* then we need a class to put the mobile navigation menu back where it was when the button is activates */
-        /* then we need to use javascript to add the class "active" when the hamburger menu is clikced and remove it when it is clicked again */
-    }
+    /* then we need a class to put the mobile navigation menu back where it was when the button is activates */
+    /* then we need to use javascript to add the class "active" when the hamburger menu is clikced and remove it when it is clicked again */
+  }
 
-    .mobile-menu-items.active {
-        transform:translateX(0)
-    }
+  .mobile-menu-items.active {
+    transform: translateX(0);
+  }
 
-    .mobile-menu-list {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        font-size: 1.2rem;
-    }
+  .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
 }
 
 /* hero */
 .hero {
   /* height: 100vh; */
   /* needed to add ../ to indicate a stepping out into parent folder? */
-  background: var(--primary-color) url("../images/header-background.jpg") center center/cover no-repeat;
+  background: var(--primary-color) url("../images/header-background.jpg") center
+    center/cover no-repeat;
   /* /* using padding to adjust the location of the hero content via limiting the hero container ? i used height 100vh to cover the area*/
   padding: 11.5rem 2rem 8rem;
   /* cover the entire container area while staying within the container */
@@ -207,7 +207,6 @@ img {
     /* width 100% keeps it responsive allowing it to change length with window size */
     width: 100%;
   }
-
 }
 
 .hero-flex {
@@ -237,30 +236,31 @@ img {
       font-weight: 400;
       margin-bottom: 2rem;
     }
-
-    }
   }
+}
+
+/* learn section */
 
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
-@media (max-width:1200px) {
-    .hero {
-      .hero-flex {
-        gap: 2rem;
-      }
-
-      img {
-        max-width: 500px;
-        margin-right: 0;
-      }
-
-      h1 {
-        font-size: 3rem;
-      }
+@media (max-width: 1200px) {
+  .hero {
+    .hero-flex {
+      gap: 2rem;
     }
+
+    img {
+      max-width: 500px;
+      margin-right: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   .hero {
     text-align: center;
 
@@ -286,36 +286,32 @@ img {
   }
 }
 
-
 /* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
-@media (max-width:768px) {
-    /* first we want to hide the desktop version of the menu so it doesnt interfere with the mobile menu */
-    .main-menu-items {
-        display: none;
+@media (max-width: 768px) {
+  /* first we want to hide the desktop version of the menu so it doesnt interfere with the mobile menu */
+  .main-menu-items {
+    display: none;
+  }
+
+  .navbar {
+    .mobile-menu {
+      display: block;
     }
 
-    .navbar {
-        .mobile-menu {
-            display: block;
-        }
-
-        .mobile-menu-toggle {
-            display: block;
-            padding: .6rem;
-        }
-        
+    .mobile-menu-toggle {
+      display: block;
+      padding: 0.6rem;
     }
+  }
 }
 
-@media (max-width:576px) {
-  .hero  {
+@media (max-width: 576px) {
+  .hero {
     margin-top: -5rem;
     .hero-flex {
       h1 {
         font-size: 2.5rem;
       }
     }
-
   }
 }
-
