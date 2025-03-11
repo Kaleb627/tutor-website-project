@@ -444,6 +444,7 @@ section {
   }
 }
 
+/* takeaway */
 .takeaway-flex {
   display: flex;
   flex-direction: column;
