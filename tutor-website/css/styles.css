@@ -121,6 +121,8 @@ section {
   padding: 1rem 2rem;
   /* we want this element position to be fixed at the top so we can make it follow the user as they scroll (this is one method there are other ways see position:sticky) */
   position: fixed;
+  background-color: transparent;
+
   /* places element at the very top and all the way from left to right */
   top: 0;
   right: 0;
@@ -133,7 +135,7 @@ section {
   transition: background-color 0.3s ease-in-out;
 }
 
-.navbar-scroll {
+.navbar.navbar-scroll {
   background-color: rgba(235, 77, 85, 0.7);
   /* we are going to use backdrop filter to add a little blur */
   backdrop-filter: blur(10px);
@@ -220,64 +222,48 @@ section {
 
 /* hero */
 .hero {
-  /* height: 100vh; */
-  /* needed to add ../ to indicate a stepping out into parent folder? */
-  background: var(--primary-color) url("../images/header-background.jpg") center
-    center/cover no-repeat;
-  /* /* using padding to adjust the location of the hero content via limiting the hero container ? i used height 100vh to cover the area*/
+  background: var(--primary-color) url('../images/header-background.jpg') center center/cover
+    no-repeat;
   padding: 11.5rem 2rem 8rem;
-  /* cover the entire container area while staying within the container */
-  /* background-size: 100% 100%; */
-  color: white;
-  /* want to hide any hoeizontal scroll bars especially when using tricks like with the mobile menu where the menu is outside the view of the window on the left or right */
-  overflow: hidden;
-  /* need position relative to properly position the frame decoration */
+  color: #fff;
+  overflow-x: hidden;
   position: relative;
+  margin-top: -5rem;
 
+  .hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    padding-bottom: 8rem;
+    margin-top: 3rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+  
   img {
     width: 100%;
-    /* to move the image over to the right a bit we can use a negitive value for margin */
-    margin-right: -6.25rem;
+    margin-right: -100px;
   }
 
   .frame-decoration {
-    /* absolute positiong removes the element (svg) from the document flow palcing it on top and not moving around other elements allowing us to layer / position it for the wave effect */
     position: absolute;
-    left: 0;
     bottom: 0;
-    /* use hiehgt to shrink it down a little */
-    height: 100px;
-    /* width 100% keeps it responsive allowing it to change length with window size */
+    left: 0;
     width: 100%;
-  }
-}
-
-.hero-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* height: 100%; */
-  gap: 6rem;
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-
-    h1 {
-      font-size: 3.5rem;
-      line-height: 1.2;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
+    height: 100px;
   }
 }
 
@@ -395,7 +381,11 @@ section {
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width: 1200px) {
+  section {
+    margin: 0;
+  }
   .hero {
+    margin-bottom: 0;
     .hero-flex {
       gap: 2rem;
     }
@@ -408,6 +398,13 @@ section {
     h1 {
       font-size: 3rem;
     }
+  }
+
+  .course-chapters {
+    h1 {
+      margin-top: 4rem;
+    }
+    
   }
 }
 

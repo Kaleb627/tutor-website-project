@@ -206,6 +206,7 @@ img {
   color: #fff;
   overflow-x: hidden;
   position: relative;
+  margin-top: -5rem;
 }
 
 .hero .hero-flex {
