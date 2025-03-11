@@ -222,48 +222,65 @@ section {
 
 /* hero */
 .hero {
-  background: var(--primary-color) url('../images/header-background.jpg') center center/cover
-    no-repeat;
+  /* height: 100vh; */
+  /* needed to add ../ to indicate a stepping out into parent folder? */
+  background: var(--primary-color) url("../images/header-background.jpg") center
+    center/cover no-repeat;
+  /* /* using padding to adjust the location of the hero content via limiting the hero container ? i used height 100vh to cover the area*/
   padding: 11.5rem 2rem 8rem;
-  color: #fff;
-  overflow-x: hidden;
+  /* cover the entire container area while staying within the container */
+  /* background-size: 100% 100%; */
+  color: white;
+  /* want to hide any hoeizontal scroll bars especially when using tricks like with the mobile menu where the menu is outside the view of the window on the left or right */
+  overflow: hidden;
+  /* need position relative to properly position the frame decoration */
   position: relative;
-  margin-top: -5rem;
+  margin: -4rem;
 
-  .hero-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6rem;
-    padding-bottom: 8rem;
-    margin-top: 3rem;
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-    font-weight: 400;
-  }
-  
   img {
     width: 100%;
-    margin-right: -100px;
+    /* to move the image over to the right a bit we can use a negitive value for margin */
+    margin-right: -6.25rem;
   }
 
   .frame-decoration {
+    /* absolute positiong removes the element (svg) from the document flow palcing it on top and not moving around other elements allowing us to layer / position it for the wave effect */
     position: absolute;
-    bottom: 0;
     left: 0;
+    bottom: 0;
+    /* use hiehgt to shrink it down a little */
+    height: 100px;
+    /* width 100% keeps it responsive allowing it to change length with window size */
     width: 100%;
-    height: 150px;
+  }
+}
+
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+  padding-bottom: 4rem;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -379,6 +396,54 @@ section {
   }
 }
 
+/* info */
+.info {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* to make the image resize properly we need to include top/cover */
+  /* top is the position starting the image from the top of the container */
+  /* cover is the size  making sure it fills the container */
+  /* cover scales teh image while preserving is aspect ratio */
+  background: var(--primary-color) url("../images/audience.jpg") top/cover no-repeat;
+
+  .info-left {
+    width: 50%;
+  }
+
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 3rem 3.5rem;
+    background-color: var(--primary-color);
+    color: white;
+
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+    }
+
+    li {
+      margin-bottom: .5rem;
+    }
+
+    i {
+      padding-right: .5rem;
+      color: var(--secondary-color);
+    }
+
+  }
+}
+
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width: 1200px) {
@@ -442,6 +507,18 @@ section {
       grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
     }
   }
+
+  .info {
+    flex-direction: column;
+
+    .info-left {
+      display: none;
+    }
+    
+    .info-content {
+      width: 100%;
+    }
+  }
 }
 
 /* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
@@ -452,14 +529,20 @@ section {
   }
 
   .navbar {
+    padding: 1rem 0.5rem;
     .mobile-menu {
       display: block;
     }
 
     .mobile-menu-toggle {
       display: block;
-      padding: 0.6rem;
+      /* padding: 0.6rem; */
     }
+  }
+
+  .hero {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .learn {
@@ -499,4 +582,18 @@ section {
       padding: 0 1rem;
     }
   }
+
+  .info {
+    .info-content {
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+    .info-left {
+      display: none;
+    }
+  }
+  
 }
