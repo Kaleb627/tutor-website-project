@@ -90,8 +90,8 @@ img {
 }
 
 .heading-border {
-  width: 4rem;
-  height: 0.45rem;
+  width: 3.8rem;
+  height: 0.3rem;
   background: var(--primary-color);
   margin: 0 auto 1rem;
 }
@@ -444,6 +444,28 @@ section {
   }
 }
 
+.takeaway-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.takeaway-cards {
+  display: grid;
+  grid: 1fr 1fr/1fr 1fr 1fr;
+  gap: 2rem;
+
+  .card {
+    flex-direction: row;
+    text-align: start;
+    gap: .5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
 /* Media Queries */
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width: 1200px) {
@@ -514,7 +536,7 @@ section {
     .info-left {
       display: none;
     }
-    
+
     .info-content {
       width: 100%;
     }
