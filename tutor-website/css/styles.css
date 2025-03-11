@@ -263,7 +263,7 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 150px;
   }
 }
 
@@ -275,6 +275,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -4rem;
   }
   /* initial styling for headers changed to use utility class located in utility section of this css document */
 
@@ -398,6 +399,10 @@ section {
     h1 {
       font-size: 3rem;
     }
+  }
+
+  .learn {
+    margin-top: 4rem;
   }
 
   .course-chapters {
