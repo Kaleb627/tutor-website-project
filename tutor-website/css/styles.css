@@ -583,6 +583,9 @@ section {
   }
 }
 
+
+/*  */
+
 /* Media Queries */
 
 
@@ -668,6 +671,7 @@ section {
   .author-flex,
   .details-flex {
     flex-direction: column;
+}
 }
 
 /* we need to set up the page for mobile sized screens especially phones where we want to impliment a hamburer menu so we will start here */
