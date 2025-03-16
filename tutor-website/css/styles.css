@@ -54,7 +54,7 @@ img {
 
 .btn {
   display: inline-block;
-  padding: 1.3rem 2.3rem;
+  padding: 1rem 1.5rem;
   border: 1px solid var(--secondary-color);
   border-radius: 32px;
   background-color: var(--secondary-color);
@@ -595,14 +595,13 @@ section {
 
 .stats-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 5rem;
   text-align: center;
 
   img {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
   }
 }
 
@@ -612,6 +611,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 1.8rem;
+  max-width: 450px;
 
   .stat-numbers {
     display: flex;
@@ -654,17 +654,14 @@ section {
   .email-input {
     border-radius: 20px;
     border: 1px solid lightgray;
-    padding: 0.8rem;
-    padding-right: 10rem;
+    padding: 0.8rem 1rem;
     font-size: 0.7rem;
+    width: 100%;
+    max-width: 400px;
   }
 
   p {
     max-width: 600px;
-  }
-
-  a {
-    font-size: 0.8rem;
   }
 }
 
@@ -674,6 +671,7 @@ section {
   background-color: var(--dark-color);
   padding: 4.5rem 0;
   margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .socials-flex {
@@ -693,7 +691,7 @@ section {
 
     a {
       color: white;
-      font-size: 1.6rem;
+      font-size: 1.3rem;
 
       &:hover {
         color: var(--secondary-color);
@@ -703,6 +701,10 @@ section {
 }
 
 /* footer */
+.footer {
+  margin: 0;
+}
+
 .footer-flex {
   display: flex;
   justify-content: space-between;
@@ -737,7 +739,7 @@ section {
 /* these allow us to tailer the website style based on screen size which is vital to maintain readability and usability across devices and screen resolutions */
 @media (max-width: 1200px) {
   section {
-    margin: 0;
+    margin: 3rem 0;
   }
   .hero {
     margin-bottom: 0;
@@ -815,6 +817,11 @@ section {
   .author-flex,
   .details-flex {
     flex-direction: column;
+  }
+
+  .stats-flex {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -905,5 +912,9 @@ section {
     .takeaway-cards {
       grid: auto/1fr;
     }
+  }
+
+  .stat-numbers {
+    flex-wrap: wrap;
   }
 }
