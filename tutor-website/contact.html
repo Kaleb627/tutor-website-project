@@ -11,9 +11,148 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="./images/favicon.png">
+  <title>Welcome To Tutor</title>
 </head>
 
 <body>
+  <!-- navigation -->
+  <nav class="navbar">
+    <!-- we dont want to put the container around everything in a project of this size otherwise we will have problems placing background images and  contriolling element widths -->
+    <div class="navbar-flex container">
+      <img src="./images/logo.svg" alt="tutor logo">
+
+      <div class="main-menu-items">
+        <ul class="main-menu-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#chapters">Chapters</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#takeaways">Takeaways</a></li>
+          <li><a href="#author">Author</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="facebook.com">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="twitter.com">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mobile-menu">
+        <!-- hamburger button -->
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars fa-2x"></i>
+        </div>
+        <!-- mobile menu items -->
+        <div class="mobile-menu-items">
+          <ul class="mobile-menu-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#chapters">Chapters</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#takeaways">Takeaways</a></li>
+            <li><a href="#author">Author</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="facebook.com">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="twitter.com">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="contact-hero">
+    <h1>Contact Us</h1>
+  </div>
+
+  <!-- contact form -->
+  <section class="contact-form container-sm">
+    <p>We love to create dependable business solutions for smalla nd medium sized companies. Email our office using
+      contact@website.com or call us using +123-456-3456</p>
+
+    <input type="name" name="name" placeholder="Name">
+    <input type="email" name="email" placeholder="Email">
+    <textarea name="message" id="message" placeholder="Message"></textarea>
+    <button class="btn" type="submit">Submit</button>
+  </section>
+
+  <!-- Location -->
+  <section class="location container">
+    <h2>Office Location</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolorum blanditiis sit provident!</p>
+    <p>map placeholder</p>
+  </section>
+
+  <!-- socials -->
+  <section class="socials">
+    <div class="socials-flex container">
+      <p>Follow us on social media for updates and news about our courses.</p>
+      <ul class="social-icons">
+        <li>
+          <a href="www.facebook.com">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="www.twitter.com">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a></i>
+        </li>
+        <li>
+          <a href="www.instagram.com">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="www.linkedin.com">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="www.youtube.com">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="www.pinterest.com">
+            <i class="fa-brands fa-pinterest fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="footer-flex">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <p>© 2024 - 2025 Tutor. All rights reserved</p>
+    </div>
+
+
+  </section>
+
   <script src="js/script.js"></script>
 </body>
 
