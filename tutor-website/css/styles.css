@@ -750,18 +750,18 @@ section {
   }
 }
 
-.contact-form {
+.contact-form p {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.contact-form form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
   max-width: 50rem;
   margin-top: 3rem;
-
-  p {
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
 
   input {
     padding: 1rem;
