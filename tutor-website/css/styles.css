@@ -733,11 +733,12 @@ section {
     }
   }
 }
+
 /* contact page */
 .contact-hero {
   color: white;
   background-color: var(--primary-color);
-  height: 15vh;
+  height: 200px;
   display: flex;
   align-items: center;
 
@@ -745,6 +746,7 @@ section {
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
+    padding-top: 1rem;
   }
 }
 
@@ -764,11 +766,14 @@ section {
   input {
     padding: 1rem;
     border: 1px solid lightgray;
+    font-size: medium;
   }
 
   textarea {
-    padding: 0.5rem 5rem 7rem 0.5rem;
+    height: 150px;
+    padding: 1rem;
     border: 1px solid lightgray;
+    font-size: medium;
   }
 
   .btn {
@@ -787,6 +792,26 @@ section {
 
   p {
     margin: 0.8rem 0;
+  }
+
+  .map {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    margin-bottom: 3rem;
+    padding-bottom: 50%;
+    border-radius: 0.25rem;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+      border: none;
+      margin-top: 1rem;
+    }
   }
 }
 
@@ -980,5 +1005,11 @@ section {
 
   .stat-numbers {
     flex-wrap: wrap;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 }
