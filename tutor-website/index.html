@@ -18,10 +18,13 @@
 
 <body>
   <!-- navigation -->
-  <nav class="navbar">
+  <nav role="navigation" aria-label="main navigation" class="navbar">
     <!-- we dont want to put the container around everything in a project of this size otherwise we will have problems placing background images and  contriolling element widths -->
     <div class="navbar-flex container">
-      <img src="./images/logo.svg" alt="tutor logo">
+
+      <a href="#home" aria-label="logo home link">
+        <img src="./images/logo.svg" alt="tutor logo">
+      </a>
 
       <div class="main-menu-items">
         <ul class="main-menu-list">
@@ -32,12 +35,12 @@
           <li><a href="#author">Author</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="facebook.com">
+            <a href="https://facebook.com" aria-label="link to facebook">
               <i class="fa-brands fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="twitter.com">
+            <a href="https://twitter.com" aria-label="link to twitter">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </li>
@@ -47,11 +50,12 @@
       <!-- mobile menu -->
       <div class="mobile-menu">
         <!-- hamburger button -->
-        <div class="mobile-menu-toggle">
+        <div class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-menu-items"
+          aria-label="open mobile menu" tabindex="0">
           <i class="fas fa-bars fa-2x"></i>
         </div>
         <!-- mobile menu items -->
-        <div class="mobile-menu-items">
+        <div class="mobile-menu-items" id="mobile-menu-items">
           <ul class="mobile-menu-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#chapters">Chapters</a></li>
@@ -60,12 +64,12 @@
             <li><a href="#author">Author</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li>
-              <a href="facebook.com">
+              <a href="facebook.com" aria-label="link to facebook">
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="twitter.com">
+              <a href="twitter.com" aria-label="link to twitter">
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
@@ -76,7 +80,7 @@
   </nav>
 
   <!-- hero -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-flex container">
       <div class="hero-content">
         <h1>Create Your Own Video Courses</h1>
@@ -103,7 +107,7 @@
   </section>
 
   <!-- learn -->
-  <section class="learn">
+  <section class="learn" id="learn">
     <div class="learn-flex container">
       <!-- changed class to "section-header" utility class based on course walkthrough and fact it will need repeated for follownig sections-->
       <div class="section-header">
@@ -333,6 +337,7 @@
 
   </section>
 
+  <!-- stats -->
   <section class="stats" id="stats">
     <div class="stats-flex container">
       <img src="./images/stats.png" alt="">
@@ -340,20 +345,20 @@
       <div class="stats-content">
         <div class="stat-numbers">
           <div>
-            <h3>2000+</h3>
-            <p>Happy Users</p>
+            <h3 aria-labelledby="happy-users">2000+</h3>
+            <p id="happy-users">Happy Users</p>
           </div>
           <div>
-            <h3>358</h3>
-            <p>Issued Solved</p>
+            <h3 aria-labelledby="issued-solved">358</h3>
+            <p id="issued-solved">Issued Solved</p>
           </div>
           <div>
-            <h3>980</h3>
-            <p>Good Reviews</p>
+            <h3 aria-labelledby="good-reviews">980</h3>
+            <p id="good-reviews">Good Reviews</p>
           </div>
           <div>
-            <h3>216</h3>
-            <p>Case Studies</p>
+            <h3 aria-labelledby="case-studies">216</h3>
+            <p id="case-studies">Case Studies</p>
           </div>
         </div>
 
@@ -381,32 +386,32 @@
       <p>Follow us on social media for updates and news about our courses.</p>
       <ul class="social-icons">
         <li>
-          <a href="www.facebook.com">
+          <a href="https://facebook.com" target="_blank" aria-label="link to facebook">
             <i class="fa-brands fa-facebook fa-2x"></i>
           </a>
         </li>
         <li>
-          <a href="www.twitter.com">
+          <a href="https://twitter.com" target="_blank" aria-label="link to twitter">
             <i class="fa-brands fa-twitter fa-2x"></i>
           </a></i>
         </li>
         <li>
-          <a href="www.instagram.com">
+          <a href="https://instagram.com" target="_blank" aria-label="link to instagram">
             <i class="fa-brands fa-instagram fa-2x"></i>
           </a>
         </li>
         <li>
-          <a href="www.linkedin.com">
+          <a href="https://linkedin.com" target="_blank" aria-label="link to linkedin">
             <i class="fa-brands fa-linkedin fa-2x"></i>
           </a>
         </li>
         <li>
-          <a href="www.youtube.com">
+          <a href="https://youtube.com" target="_blank" aria-label="link to youtube">
             <i class="fa-brands fa-youtube fa-2x"></i>
           </a>
         </li>
         <li>
-          <a href="www.pinterest.com">
+          <a href="https://pinterest.com" target="_blank" aria-label="link to pinterest">
             <i class="fa-brands fa-pinterest fa-2x"></i>
           </a>
         </li>

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // then we want to listen for when the toggle button is clicked and add/remove the active class to  .mobile-menu-items so that the menu will sweep in and out
   toggleButton.addEventListener("click", function () {
     mobileMenu.classList.toggle("active");
+    mobileMenu.ariaExpanded.toggle("true");
   });
 
   // function to give navbar a semi trasnparent background when scrolled past default position to make it more readable as you move down the page
